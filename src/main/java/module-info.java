@@ -2,6 +2,7 @@ module dev.clerdmy.itemhub {
     requires javafx.controls;
     requires javafx.fxml;
     requires org.hibernate.orm.core;
+    requires org.slf4j;
     requires jakarta.persistence;
     requires java.naming;
 
