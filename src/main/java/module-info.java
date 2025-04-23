@@ -5,6 +5,7 @@ module dev.clerdmy.itemhub {
     requires org.slf4j;
     requires jakarta.persistence;
     requires java.naming;
+    requires jbcrypt;
 
 
     opens dev.clerdmy.itemhub to javafx.fxml;
