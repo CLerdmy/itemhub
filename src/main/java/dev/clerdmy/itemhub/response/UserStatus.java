@@ -1,0 +1,15 @@
+package dev.clerdmy.itemhub.response;
+
+public enum UserStatus {
+
+    EMPTY,
+    EMPTY_NAME,
+    EMPTY_EMAIL,
+    EMPTY_PASSWORD,
+    INVALID_EMAIL,
+    EMAIL_ALREADY_EXISTS,
+    MISMATCHING_PASSWORDS,
+    SUCCESS,
+    INCORRECT_EMAIL, INCORRECT_PASSWORD, ERROR
+
+}
