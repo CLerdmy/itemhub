@@ -13,4 +13,6 @@ module dev.clerdmy.itemhub {
 
     opens dev.clerdmy.itemhub.ui.controllers to javafx.fxml;
     exports dev.clerdmy.itemhub.ui.controllers;
+
+    opens dev.clerdmy.itemhub.model to org.hibernate.orm.core;
 }
