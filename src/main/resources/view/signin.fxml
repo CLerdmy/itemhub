@@ -8,10 +8,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.Region?>
 
-<VBox alignment="CENTER" prefHeight="337.0" prefWidth="312.0" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22.0.1" fx:controller="dev.clerdmy.itemhub.ui.controllers.LoginController">
+<?import javafx.scene.control.Hyperlink?>
+<VBox alignment="CENTER" prefHeight="337.0" prefWidth="312.0" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22.0.1" fx:controller="dev.clerdmy.itemhub.ui.controllers.SignInController">
 
    <stylesheets>
-      <URL value="@login.css" />
+      <URL value="@css/authentication.css" />
    </stylesheets>
 
    <Region VBox.vgrow="ALWAYS" />
@@ -21,7 +22,8 @@
    <Label fx:id="hint" alignment="CENTER" prefHeight="35.0" prefWidth="130.0" styleClass="hint-label"/>
    <TextField fx:id="loginField" pickOnBounds="false" prefHeight="30.0" prefWidth="250.0" promptText="Login" />
    <PasswordField fx:id="passwordField" prefHeight="30.0" prefWidth="250.0" promptText="Password" />
-   <Button mnemonicParsing="false" onAction="#onLogin" prefHeight="30.0" prefWidth="250.0" text="Sign In" />
+   <Button mnemonicParsing="false" onAction="#onSignIn" prefHeight="30.0" prefWidth="250.0" text="Sign In" />
+   <Hyperlink text="Don't have an account? Sign Up" onAction="#onHyperLink" />
    <Region VBox.vgrow="ALWAYS" />
 
 </VBox>
