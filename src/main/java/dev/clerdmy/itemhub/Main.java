@@ -2,6 +2,7 @@ package dev.clerdmy.itemhub;
 
 import dev.clerdmy.itemhub.ui.SceneManager;
 import dev.clerdmy.itemhub.ui.UIConstants;
+import dev.clerdmy.itemhub.util.HibernateUtil;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -17,6 +18,11 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
+        //improve cold start?
+        logger.info("Initializing Hibernate");
+        HibernateUtil.getSessionFactory();
+        logger.info("Hibernate initialized");
+
         Group root = new Group();
         Scene scene = new Scene(root, UIConstants.DEFAULT_WIDTH, UIConstants.DEFAULT_HEIGHT);
         stage.setMinWidth(UIConstants.MIN_WIDTH);
@@ -25,7 +31,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
         SceneManager.setStage(stage);
-        SceneManager.loadNewScene("/view/signin.fxml");
+        SceneManager.loadNewScene("/view/SignIn.fxml");
     }
 
     public static void main(String[] args) {
