@@ -4,8 +4,6 @@ import dev.clerdmy.itemhub.ui.SceneManager;
 import dev.clerdmy.itemhub.ui.UIConstants;
 import dev.clerdmy.itemhub.util.HibernateUtil;
 import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,15 +21,14 @@ public class Main extends Application {
         HibernateUtil.getSessionFactory();
         logger.info("Hibernate initialized");
 
-        Group root = new Group();
-        Scene scene = new Scene(root, UIConstants.DEFAULT_WIDTH, UIConstants.DEFAULT_HEIGHT);
+        SceneManager.setStage(stage);
+
         stage.setMinWidth(UIConstants.MIN_WIDTH);
         stage.setMinHeight(UIConstants.MIN_HEIGHT);
         stage.setTitle("ItemHub");
-        stage.setScene(scene);
         stage.show();
-        SceneManager.setStage(stage);
-        SceneManager.loadNewScene("/view/SignIn.fxml");
+
+        SceneManager.showLoginOrMain();
     }
 
     public static void main(String[] args) {

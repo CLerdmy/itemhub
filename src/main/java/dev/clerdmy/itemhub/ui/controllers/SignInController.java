@@ -3,6 +3,7 @@ package dev.clerdmy.itemhub.ui.controllers;
 import dev.clerdmy.itemhub.control.SessionManager;
 import dev.clerdmy.itemhub.response.UserStatus;
 import dev.clerdmy.itemhub.ui.SceneManager;
+import dev.clerdmy.itemhub.ui.UIConstants;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -21,14 +22,15 @@ public class SignInController {
     private Label hint;
 
     @FXML
-    private void onSignIn() {
+    private void onSignIn() throws IOException {
         UserStatus status = SessionManager.login(loginField.getText(), passwordField.getText());
         hint.setText(status.toString());
+        if (status == UserStatus.SUCCESS) SceneManager.showLoginOrMain();
     }
 
     @FXML
     private void onHyperLink() throws IOException {
-        SceneManager.switchTo("/view/signup.fxml");
+        SceneManager.switchTo(UIConstants.SIGN_UP_FXML_PATH);
     }
 
 }

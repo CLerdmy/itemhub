@@ -20,6 +20,10 @@ public class SessionManager {
         }
     }
 
+    public static boolean isLogged() {
+        return currentUser != null;
+    }
+
     public static void addSessionListener(SessionListener listener) {
         listeners.add(listener);
     }

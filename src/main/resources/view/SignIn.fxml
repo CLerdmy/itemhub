@@ -12,7 +12,7 @@
 <VBox alignment="CENTER" prefHeight="337.0" prefWidth="312.0" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22.0.1" fx:controller="dev.clerdmy.itemhub.ui.controllers.SignInController">
 
    <stylesheets>
-      <URL value="@css/authentication.css" />
+      <URL value="@css/Authentication.css" />
    </stylesheets>
 
    <Region VBox.vgrow="ALWAYS" />

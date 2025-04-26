@@ -52,3 +52,16 @@
     -fx-max-width: 300px;
     -fx-max-height: 100px;
 }
+
+.hyperlink {
+    -fx-alignment: center;
+    -fx-font-family: "Georgia";
+    -fx-font-size: 14px;
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-max-width: 300px;
+    -fx-max-height: 100px;
+}
+
+.hyperlink:pressed {
+    -fx-focus-color: transparent;
+}
