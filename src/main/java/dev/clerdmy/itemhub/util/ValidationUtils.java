@@ -1,6 +1,5 @@
 package dev.clerdmy.itemhub.util;
 
-import dev.clerdmy.itemhub.model.User;
 import dev.clerdmy.itemhub.response.UserResult;
 import dev.clerdmy.itemhub.response.UserStatus;
 import org.mindrot.jbcrypt.BCrypt;
